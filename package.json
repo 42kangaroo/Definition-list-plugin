@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-sample-plugin",
-	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"name": "obsidian-definition-lists",
+	"version": "0.0.1",
+	"description": "should somehow be able to render definition lists",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
@@ -12,13 +12,17 @@
 	"author": "",
 	"license": "MIT",
 	"devDependencies": {
-		"@types/node": "^16.11.6",
+		"@types/node": "^20.12.10",
 		"@typescript-eslint/eslint-plugin": "5.29.0",
 		"@typescript-eslint/parser": "5.29.0",
 		"builtin-modules": "3.3.0",
-		"esbuild": "0.17.3",
+		"codemirror": "^6.0.1",
+		"esbuild": "^0.17.3",
 		"obsidian": "latest",
 		"tslib": "2.4.0",
 		"typescript": "4.7.4"
+	},
+	"dependencies": {
+		"process": "^0.11.10"
 	}
 }
