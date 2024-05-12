@@ -28,7 +28,7 @@ export const defListField = StateField.define<DecorationSet>({
 			if (!(transaction.newDoc.lineAt(match.index  + match[0].length).to < transaction.state.selection.main.from || match.index > transaction.state.selection.main.to)) continue;
 			if (match.index + match[0].length < doc.length) {
 				var dL = new DefList(match[0], this);
-				dlSet = dlSet.update({add: [Decoration.replace({widget: dL}).range(match.index, match.index + match[0].length)]});
+				dlSet = dlSet.update({add: [Decoration.replace({widget: dL}).range(mi + match.index, mi + match.index + match[0].length)]});
 			}
 		}
 		return dlSet;

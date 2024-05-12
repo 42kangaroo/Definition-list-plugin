@@ -94,7 +94,7 @@ var defListField = import_state.StateField.define({
         continue;
       if (match.index + match[0].length < doc.length) {
         var dL = new DefList(match[0], this);
-        dlSet = dlSet.update({ add: [import_view2.Decoration.replace({ widget: dL }).range(match.index, match.index + match[0].length)] });
+        dlSet = dlSet.update({ add: [import_view2.Decoration.replace({ widget: dL }).range(mi + match.index, mi + match.index + match[0].length)] });
       }
     }
     return dlSet;
