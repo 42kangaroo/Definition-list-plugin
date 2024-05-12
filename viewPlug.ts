@@ -25,7 +25,7 @@ export const defListField = StateField.define<DecorationSet>({
 		let regexp = new RegExp(/.*[\r\n|\r|\n]:\s(.+[\r\n|\r|\n])*/g);
 		var match;
 		while ((match = regexp.exec(doc)) != null) {
-			if (!(transaction.newDoc.lineAt(match.index  + match[0].length).to < transaction.state.selection.main.from || match.index > transaction.state.selection.main.to)) continue;
+			if (!(transaction.newDoc.lineAt(mi + match.index  + match[0].length).to < transaction.state.selection.main.from || mi +  match.index > transaction.state.selection.main.to)) continue;
 			if (match.index + match[0].length < doc.length) {
 				var dL = new DefList(match[0], this);
 				dlSet = dlSet.update({add: [Decoration.replace({widget: dL}).range(mi + match.index, mi + match.index + match[0].length)]});
